@@ -1,0 +1,160 @@
+.pop-it {
+  margin: 0 auto;
+  width: 644px;
+}
+
+.row {
+  display: flex;
+  border: 7px solid;
+  border-top: none;
+}
+
+.row__item {
+  cursor: pointer;
+  position: relative;
+  display: block;
+  padding: 45px;
+}
+
+.row__item input {
+  position: absolute;
+  opacity: 0;
+}
+
+.row:first-child {
+  border-top: 7px solid;
+  border-start-start-radius: 20px;
+  border-start-end-radius: 20px;
+}
+
+.row:first-child .row__item:first-child {
+  border-start-start-radius: 20px;
+}
+
+.row:first-child .row__item:last-child {
+  border-start-end-radius: 20px;
+}
+
+.row:last-child {
+  border-top: none;
+  border-bottom: 7px solid;
+  border-end-start-radius: 20px;
+  border-end-end-radius: 20px;
+}
+
+.row:last-child .row__item:first-child {
+  border-end-start-radius: 20px;
+}
+
+.row:last-child .row__item:last-child {
+  border-end-end-radius: 20px;
+}
+
+.ciracle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 73px;
+  width: 73px;
+  border: 8px solid;
+  border-radius: 50%;
+  box-shadow: inset 16px 32px 16px rgba(255, 255, 255, 0.2),
+    inset -16px -32px 16px rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4) 0px 2px 4px;
+  transition: 100ms ease-in-out box-shadow;
+}
+
+.row__item input:checked ~ .ciracle {
+  box-shadow: inset -16px -32px 16px rgba(255, 255, 255, 0.2),
+    inset 16px 32px 16px rgba(0, 0, 0, 0.4);
+}
+
+.row--red,
+.row--red .ciracle {
+  background: linear-gradient(
+    0deg,
+    rgb(253, 187, 45) 0%,
+    rgb(237, 79, 44) 100%
+  );
+  border-color: rgb(230, 140, 56);
+}
+
+.row--red:first-child,
+.row--red:last-child {
+  border-color: rgb(230, 140, 56);
+}
+
+.row--orange,
+.row--orange .ciracle {
+  background: linear-gradient(
+    0deg,
+    rgb(237, 235, 44) 0%,
+    rgb(253, 187, 45) 100%
+  );
+  border-color: rgb(233, 208, 94);
+}
+
+.row--orange:first-child,
+.row--orange:last-child {
+  border-color: rgb(233, 208, 94);
+}
+
+.row--yellow,
+.row--yellow .ciracle {
+  background: linear-gradient(
+    0deg,
+    rgb(45, 253, 58) 0%,
+    rgb(237, 235, 44) 100%
+  );
+  border-color: rgb(194, 219, 52);
+}
+
+.row--yellow:first-child,
+.row--yellow:last-child {
+  border-color: rgb(194, 219, 52);
+}
+
+.row--green,
+.row--green .ciracle {
+  background: linear-gradient(
+    0deg,
+    rgb(43, 208, 235) 0%,
+    rgb(45, 253, 58) 100%
+  );
+  border-color: rgb(38, 224, 94);
+}
+
+.row--green:first-child,
+.row--green:last-child {
+  border-color: rgb(38, 224, 94);
+}
+
+.row--blue,
+.row--blue .ciracle {
+  background: linear-gradient(
+    0deg,
+    rgb(45, 43, 235) 0%,
+    rgb(42, 208, 235) 100%
+  );
+  border-color: rgb(55, 111, 233);
+}
+
+.row--blue:first-child,
+.row--blue:last-child {
+  border-color: rgb(55, 111, 233);
+}
+
+.row--purple,
+.row--purple .ciracle {
+  background: linear-gradient(
+    0deg,
+    rgb(197, 42, 235) 0%,
+    rgb(45, 43, 235) 100%
+  );
+  border-color: rgb(148, 38, 212);
+}
+
+.row--purple:first-child,
+.row--purple:last-child {
+  border-color: rgb(148, 38, 212);
+}
